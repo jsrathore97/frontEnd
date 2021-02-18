@@ -1,0 +1,66 @@
+<div style="position: relative;">
+    <div class="bg-image"><img src="../../assets/img/dubai1.jpg" style="height: 100%; width: 100%;"></div>
+    </div>
+<div style="padding-top: 200px;">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <label for="">First Name</label>
+            <input type="text" [(ngModel)]="fname" placeholder="Enter First  Name ... " class="form-control">
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <label for="">Last Name</label>
+            <input type="text" [(ngModel)]="lname" placeholder="Enter Last Name ... " class="form-control">
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <label for="">City</label>
+            <input type="text" [(ngModel)]="city" placeholder="Enter City ... " class="form-control">
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <label for="">Email</label>
+            <input type="text" [(ngModel)]="email" placeholder="Enter Email ... " class="form-control">
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <label for="">Password</label>
+            <input type="password" [(ngModel)]="password" placeholder="Enter Password ... " class="form-control">
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <label for="">Role</label>
+           <select class="form-control" [(ngModel)]="role">
+               <option value="">Select Role</option>
+               <option value="user">User</option>
+               <option value="admin">Admin</option>
+           </select>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12" style="text-align: center; padding-top: 10px; padding-bottom: 10px;">
+        <button class="btn btn-primary " (click)="register()" [disabled]="fname == '' || lname == '' || city == '' || email == '' || password == '' || role == ''">Register</button>
+        <button class="btn btn-link" [routerLink]="['/login']" style="color: white; font-weight: bold;">Login</button>
+        </div>
+    </div>
+</div>
+
