@@ -13,6 +13,8 @@ import { StudentsComponent } from './students/students.component';
 import { SchoolComponent } from './school/school.component';
 import { ClassComponent } from './class/class.component';
 import { UniversityComponent } from './university/university.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,9 @@ import { UniversityComponent } from './university/university.component';
     StudentsComponent,
     SchoolComponent,
     ClassComponent,
-    UniversityComponent
+    UniversityComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -62,6 +66,7 @@ import { UniversityComponent } from './university/university.component';
   path: 'university',
   component: UniversityComponent
 },
+
 
    ])
   ],

@@ -1,66 +1,65 @@
 <div style="position: relative;">
-    <div class="bg-image"><img src="../../assets/img/dubai1.jpg" style="height: 100%; width: 100%;"></div>
+    <div class="bg-image">
+        <!-- <img src="../../assets/img/dubai1.jpg" style="height: 100%; width: 100%;"> -->
+        <video src="../../assets/img/4k background footage (ideal for Blockchain Website).mp4" style="height: 100%; width: 100%;" loop muted autoplay>
+        </video>
     </div>
-<div style="padding-top: 200px;">
-    <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4">
-            <label for="">First Name</label>
-            <input type="text" [(ngModel)]="fname" placeholder="Enter First  Name ... " class="form-control">
-        </div>
-        <div class="col-md-4"></div>
-    </div>
-    <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4">
-            <label for="">Last Name</label>
-            <input type="text" [(ngModel)]="lname" placeholder="Enter Last Name ... " class="form-control">
-        </div>
-        <div class="col-md-4"></div>
-    </div>
-    <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4">
-            <label for="">City</label>
-            <input type="text" [(ngModel)]="city" placeholder="Enter City ... " class="form-control">
-        </div>
-        <div class="col-md-4"></div>
-    </div>
-    <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4">
-            <label for="">Email</label>
-            <input type="text" [(ngModel)]="email" placeholder="Enter Email ... " class="form-control">
-        </div>
-        <div class="col-md-4"></div>
     </div>
 
+    <div style="padding-top: 100px;">
     <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4">
-            <label for="">Password</label>
-            <input type="password" [(ngModel)]="password" placeholder="Enter Password ... " class="form-control">
-        </div>
-        <div class="col-md-4"></div>
-    </div>
-    <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4">
-            <label for="">Role</label>
-           <select class="form-control" [(ngModel)]="role">
-               <option value="">Select Role</option>
-               <option value="user">User</option>
-               <option value="admin">Admin</option>
-           </select>
-        </div>
-        <div class="col-md-4"></div>
-    </div>
+        <div class="col-md-8"></div>
+        <div class="col-md-3" style="border: 1px solid white; background-color: aliceblue; padding-top: 25px; padding-bottom: 5px; border-radius: 5px;">
+            <div>
+                <label for="">First Name</label>
+                <input type="text" [(ngModel)]="fname" placeholder=" First  Name  " class="form-control">
+            </div>
 
-    <div class="row">
-        <div class="col-md-12" style="text-align: center; padding-top: 10px; padding-bottom: 10px;">
-        <button class="btn btn-primary " (click)="register()" [disabled]="fname == '' || lname == '' || city == '' || email == '' || password == '' || role == ''">Register</button>
-        <button class="btn btn-link" [routerLink]="['/login']" style="color: white; font-weight: bold;">Login</button>
+            <div>
+                <label for="">Last Name</label>
+                <input type="text" [(ngModel)]="lname" placeholder=" Last Name  " class="form-control">
+           
+            </div>
+
+            <div>
+                <label for="">City</label>
+                <input type="text" [(ngModel)]="city" placeholder=" City  " class="form-control">
+         
+            </div>
+
+            <div>
+                <label for="">Email</label>
+                <input type="text" [(ngModel)]="email" placeholder=" Email  " class="form-control">
+         
+            </div>
+
+            <div>
+                <label for="">Password</label>
+                <input type="password" [(ngModel)]="password" placeholder=" Password  " class="form-control">
+        
+            </div>
+
+            <div>
+                <label for="">Role</label>
+                <select class="form-control" [(ngModel)]="role">
+                    <option value="">Select Role</option>
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
+
+            <div style="text-align: center; margin-top: 15px;">
+                <button style="background-color: rgb(0,174,239); color: white; padding: 3px 25px 3px 25px; border-radius: 50px; border: 0;" (click)="register()" [disabled]="fname == '' || lname == '' || city == '' || email == '' || password == '' || role == ''">Register</button>
+                <!-- <button style="background-color: rgb(46,70,105); margin-left: 10px; color: white; padding: 3px 11px 3px 11px; border-radius: 50px;"  [routerLink]="['/login']" >Login</button> -->
+            </div>
+
+            <div style="text-align: center; margin-top: 45px;">
+                <span style="background-color: rgb(0,174,239); padding: 15px 15px 7px 14px; border-radius: 45px 45px 0px 0px; color: white; font-weight: bold;">
+                    <a  href="" [routerLink]="['/login']" style="color: white;">LOGIN</a>
+                </span>
+            </div>
         </div>
+        <div class="col-md-1"></div>
     </div>
 </div>
 

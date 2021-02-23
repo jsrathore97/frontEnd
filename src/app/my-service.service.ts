@@ -51,5 +51,24 @@ delete_school(data){
 update_school(data){
   return this.http.post('http://localhost:3000/api/updateSchool' , data)
 }
+
+getClassesList(){
+  return this.http.get('http://localhost:3000/api/getClassList');
+}
+getSchoolList(){
+  return this.http.get('http://localhost:3000/api/getSchoolList');
+}
+getUniversityList(){
+  return this.http.get('http://localhost:3000/api/getUniversityList');
+}
+addStudent(data){
+  return this.http.post('http://localhost:3000/api/addStudent',data);
+}
+
+getAllStudent(){
+  return this.http.get('http://localhost:3000/api/getAllStudents');
+}
+
+
 }
 

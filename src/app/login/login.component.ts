@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
             text: 'Email & Password Matched Successfully for User...',
             icon: 'success'
           });
-          let name = result.data[0].first_Name + result.data[0].last_Name 
+          let name = result.data[0].first_Name + ""+ result.data[0].last_Name 
         sessionStorage.setItem('currentUser' , name);
         sessionStorage.setItem('userRole' , result.data[0].role)
           this.router.navigateByUrl('/dashboard');
@@ -70,4 +70,13 @@ export class LoginComponent implements OnInit {
     })
   }
 
+  textType="password";
+  value = true;
+  show(){
+    if(this.textType == 'password'){
+      this.textType = "text"
+    } else{
+      this.textType = "password"
+    }
+  }
 }

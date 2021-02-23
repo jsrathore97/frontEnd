@@ -1,7 +1,47 @@
 <div style="position: relative;">
-<div class="bg-image"><img src="../../assets/img/dubai1.jpg" style="height: 100%; width: 100%;"></div>
+<div class="bg-image">
+  <!-- <img src="../../assets/img/dubai1.jpg" style="height: 100%; width: 100%;"> -->
+  <video src="../../assets/img/util_vdo.mp4" style="height: 100%; width: 100%;" loop muted autoplay>
+  </video>
+
 </div>
-   <div style="padding-top: 200px;">
+</div>
+
+<div class="row" style="margin-top: 120px;">
+  <div class="col-md-8"></div>
+  <div class="col-md-3" style="border: 1px solid white; border-radius: 5px;">
+      <div style="text-align: center; margin-top: 60px; margin-bottom: 60px;">
+          <img src="../../assets//img/kisspng-laptop-computer-icons-user-programmer-5b09d1b816b4e9.835541531527370168093.png" height="115px">
+      </div>
+
+      <div style="text-align: center;">
+          <input type="text" [(ngModel)]="email" style="padding: 10px; width: 240px;     border: 1px solid gray; border-radius: 50px; text-align: center; outline: unset;" placeholder=" Email">
+      </div>
+
+      <div style="text-align: center;">
+          <input type="{{textType}}" [(ngModel)]="password" style="padding: 10px;  position: relative;   border: 1px solid gray; width: 240px; border-radius: 50px;  outline: unset; text-align: center; margin-top: 10px; margin-bottom: 10px;" placeholder="Password" >
+      </div>
+
+      <div style="text-align: center;">
+          <button  (click)="login()" [disabled]="email == '' || password == '' " style="width: 240px; border: 0px; padding: 5px; border-radius: 50px;  outline: unset; background-color: rgb(46,70,105); color: white;">Login</button>
+          <button  (click)="login_admin()"    [disabled]="email == '' || password == '' "  style="width: 240px; margin-top: 10px; border: 0px; padding: 5px; border-radius: 50px;  outline: unset; background-color: rgb(0,174,239);  color: white;">Admin Login</button>
+
+        </div>
+
+   
+      <!-- <div style="text-align: center; margin-bottom: 70px; padding-top: 30px;">
+          <span>Don't have account? </span> <span>     <a  href="" [routerLink]="['/registration']">Registration</a></span>
+      </div> -->
+      <div style="text-align: center; padding-top: 85px; padding-bottom: 6px;">
+          <span style="background-color: rgb(0,174,239); padding: 20px 15px 7px 14px; border-radius: 45px 45px 0px 0px; color: white; font-weight: bold;">
+              <a  href="" [routerLink]="['/register']" style="color: white;">REGISTER</a>
+          </span>
+      </div>
+  </div>
+  <div class="col-md-1"></div>
+</div>
+
+   <!-- <div style="padding-top: 200px;">
   <div class="row">
     <div class="col-md-4"></div>
     <div class="col-md-4">
@@ -15,9 +55,13 @@
     <div class="col-md-4"></div>
     <div class="col-md-4">
       <label for="">Password</label>
-      <input type="password" placeholder="Enter Password ... " [(ngModel)]="password" class="form-control">
+      <input type="{{textType}}"  placeholder="Enter Password ... " [(ngModel)]="password" class="form-control" style="position: relative;">
+      <span class="show" style="position: absolute; right: 30px; bottom: 7px;" (click)="show()">Show</span>
+      
     </div>
-    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <i class="fa fas-eye" aria-hidden="true"></i>
+    </div>
   </div>
 
   <div class="row">
@@ -28,4 +72,4 @@
     </div>
   </div>
 </div>  
- 
+  -->

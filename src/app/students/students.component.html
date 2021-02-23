@@ -1,27 +1,103 @@
-<div class="row" style="background: black; height: 40px;">
-    <div class="col-md-6">
-      
+<app-header></app-header>
+
+<div class="row">
+    <div class="col-md-2">Student Name</div>
+    <div class="col-md-2">
+        <input type="text" placeholder="Enter Student name" class="form-control" [(ngModel)]="student_name">
     </div>
-    
-    <div class="col-md-6" style="text-align: right;">
-        <span style="color: white; margin-right: 25px;">{{userName}}</span>
-        <span><Button class="btn btn-link">Logout</Button></span>
+    <div class="col-md-2">Father Name</div>
+    <div class="col-md-2">
+        <input type="text" placeholder="Enter Father name" class="form-control" [(ngModel)]="student_f_name">
     </div>
-</div>
+    <div class="col-md-2">Mother Name</div>
+    <div class="col-md-2">
+        <input type="text" placeholder="Enter Mother name" class="form-control" [(ngModel)]="student_m_name">
+    </div>
+</div>  <br>
+
+<div class="row">
+    <div class="col-md-2">City</div>
+    <div class="col-md-2">
+        <input type="text" placeholder="Enter City name" class="form-control" [(ngModel)]="student_city">
+    </div>
+    <div class="col-md-2">Mobile No.</div>
+    <div class="col-md-2">
+        <input type="text" placeholder="Enter Mobile No." class="form-control" [(ngModel)]="student_mob">
+    </div>
+    <div class="col-md-2">Admission Type</div>
+    <div class="col-md-2">
+       <select class="form-control" [(ngModel)]="student_admissionType">
+           <option value="">Select Admission Type</option>
+           <option value="Regular">Regular</option>
+           <option value="Private">Private</option>
+       </select>
+    </div>
+</div>  <br>
+
+<div class="row">
+    <div class="col-md-2">Class</div>
+    <div class="col-md-2">
+        <select class="form-control" [(ngModel)]="student_class">
+            <option value="">Select Class</option>
+            <option *ngFor="let data of getClassList" value="{{data.id}}"> {{data.class_shortName}}</option>
+        </select>
+    </div>
+    <div class="col-md-2">School</div>
+    <div class="col-md-2">
+        <select class="form-control" [(ngModel)]="student_school">
+            <option value="">Select School</option>
+            <option *ngFor="let data of getSchoolList" value="{{data.id}}">{{data.school_name}}</option>
+        </select>
+    </div>
+    <div class="col-md-2">University</div>
+    <div class="col-md-2">
+        <select class="form-control" [(ngModel)]="student_university">
+            <option value="">Select University</option>
+            <option *ngFor="let data of getUniversityList" value="{{data.id}}">{{data.univ_full_name}}</option>
+        </select>
+    </div>
+</div> <br>
 
 
-<div class="row" style="background: cadetblue; padding-top: 15px; padding-bottom: 15px; font-weight: bold;">
-    <!-- <div class="col-md-1">Home</div>
-    <div class="col-md-1">All Student</div>
-    <div class="col-md-1">ETC</div> -->
-    <div class="col-md-12">
-        <div style="margin-left:150px">
-            <span [routerLink]="['/dashboard']">     Home    </span> |
-            <span [routerLink]="['/students']">  Students</span>  |
-            <span [routerLink]="['/school']">  School </span>  |
-            <span [routerLink]="['/class']">  Class </span>  |
-            <span [routerLink]="['/university']">  University </span>
-
-        </div>
+<div class="row">
+    <div class="col-md-12 text-center">
+        <button class="btn btn-success" (click)="addSchool()" [disabled]="student_name=='' || student_f_name=='' || student_m_name=='' || student_city=='' || student_mob=='' || student_admissionType=='' || student_class=='' || student_school=='' ||student_university==''">Add Student</button>
     </div>
-</div>  
+</div> <br>
+
+
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <table>
+        <tr>
+          <th>Student Name</th>
+          <th>Student Father Name</th>
+          <th>Student Mother Name </th>
+          <th> City</th>
+          <th>Admission Type </th>
+          <th>Mobile No. </th>
+          <th>Class</th>
+          <th>School </th>
+          <th>University </th>
+        </tr>
+        <tr *ngFor="let data of allStudentList">
+          <td>{{data.student_name}} </td>
+          <td>{{data.student_f_name}}</td>
+          <td>{{data.student_m_name}}</td>
+          <td>{{data.student_city}}</td>
+          <td>{{data.student_admissiontype}}</td>
+          <td>{{data.student_mob}}</td>
+          <td>{{data.student_class}}</td>
+          <td>{{data.student_school}}</td>
+          <td>{{data.student_university}}</td>
+         
+        </tr>
+        </table>
+    </div>
+    <div class="col-md-2"></div>
+</div>  <br>
+
+
+<app-footer></app-footer>

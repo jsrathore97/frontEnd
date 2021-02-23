@@ -1,0 +1,16 @@
+.pad_top_bt_5{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.bold_white:hover{
+    font-weight: bold;
+    color: white;
+}
+
+.copy:hover{
+    font-size: 20px;
+    /* text-decoration: underline; */
+    color: black;
+    font-weight: bold;
+}

@@ -8,4 +8,9 @@
     left: 0;
   }
 
+  .show:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #ffc107;
+  }
   
